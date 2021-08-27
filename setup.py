@@ -1,7 +1,7 @@
 from setuptools import setup
 import re
 
-PACKAGE_NAME = 'domino'
+PACKAGE_NAME = 'Client'
 
 setup(
     name='python_client',
