@@ -24,10 +24,6 @@ metadata = {'cohort': 'cohort_id'}
 metadata_names = ['cohort']
 metadata_values = ['cohort_id']
 
-loggers = {
-    "Default": "DefaultLogger"
-}
-
 pred_client.init_models(feature_names, predict_names, metadata_names)
 
 # pred_client.log(features_dict, predict_dict, event_id=event_id,

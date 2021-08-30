@@ -15,5 +15,6 @@ def get_model_version():
     model_host = get_environment_value('HOSTNAME')
     return model_host.split('-')[1]
 
+
 def set_event_id(event_id):
-	os.environ['EVENT_ID'] = event_id
+    os.environ['EVENT_ID'] = event_id
