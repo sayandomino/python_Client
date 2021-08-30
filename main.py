@@ -21,10 +21,16 @@ event_time = datetime.datetime.now()
 
 # Custom metadata I want to track for this event
 metadata = {'cohort': 'cohort_id'}
+metadata_names = ['cohort']
+metadata_values = ['cohort_id']
 
 loggers = {
     "Default": "DefaultLogger"
 }
 
-pred_client.log(features_dict, predict_dict, event_id=event_id,
-                timestamp=event_time, metadata=metadata)
+pred_client.init_models(feature_names, predict_names, metadata_names)
+
+# pred_client.log(features_dict, predict_dict, event_id=event_id,
+#                 timestamp=event_time, metadata=metadata)
+
+pred_client.log_prediction(feature_values, predict_values, metadata_values, event_id, event_time)

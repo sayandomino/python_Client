@@ -27,6 +27,8 @@ class PredClient:
         if timestamp is None:
             timestamp = datetime.utcnow().timestamp() * 1000
 
+        utils.set_event_id(event_id)
+
         message = {
             "features": json.dumps(features_dict),
             "predictions": json.dumps(prediction_dict),
@@ -43,38 +45,4 @@ class PredClient:
 
         custom_logger.log_prediction(message)
 
-        # print(instance_id)
-        # arr = []
-        #
-        # dictionary = {
-        #     "id": "04",
-        #     "name": "sunil",
-        #     "depatment": "HR"
-        # }
-        #
-        # arr.append(dictionary)
-        #
-        # body_string = json.dumps(arr)
-        #
-        # body_json = json.loads(body_string)
-        #
-        # current_session = requests.session()
-        #
-        # headers = {
-        #     'Content-Type': 'application/json'
-        # }
-        #
-        # post_response = current_session.post(
-        #     url="https://jsonplaceholder.typicode.com/posts",
-        #     data=body_string,
-        #     allow_redirects=False,
-        #     verify=False
-        # )
-        #
-        # response = current_session.request(
-        #     "GET",
-        #     "https://jsonplaceholder.typicode.com/posts",
-        #     headers=headers,
-        #     verify=False
-        # )
-        # print("logging demo")
+

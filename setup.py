@@ -1,5 +1,4 @@
 from setuptools import setup
-import re
 
 PACKAGE_NAME = 'Client'
 
