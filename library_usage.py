@@ -17,7 +17,7 @@ predict_dict = dict(zip(predict_names, predict_values))
 
 # Record eventID and current time
 event_id = uuid.uuid4()
-event_time = datetime.datetime.now()
+event_time = datetime.datetime.now().timestamp()*1000
 
 # Custom metadata I want to track for this event
 metadata = {'cohort': 'cohort_id'}
@@ -25,8 +25,5 @@ metadata_names = ['cohort']
 metadata_values = ['cohort_id']
 
 pred_client.init_models(feature_names, predict_names, metadata_names)
-
-# pred_client.log(features_dict, predict_dict, event_id=event_id,
-#                 timestamp=event_time, metadata=metadata)
 
 pred_client.log_prediction(feature_values, predict_values, metadata_values, event_id, event_time)
