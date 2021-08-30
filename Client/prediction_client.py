@@ -98,3 +98,4 @@ class PredClient:
         custom_logger.log_prediction(message_to_be_flushed)
 
         return message
+
