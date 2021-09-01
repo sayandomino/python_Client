@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 
 from Client import utils
@@ -6,7 +7,7 @@ import uuid
 from Client.logger import loggerfactory
 
 
-class PredClient:
+class PredictionClient:
     def __init__(self):
         print("Prediction Client initializing ...")
 
@@ -51,9 +52,7 @@ class PredClient:
             "dmo_prediction_instance_id" : self.instance_id
         }
 
-        message_to_be_flushed = {
-            "dominodatalab.predictions.message": message
-        }
+        message_to_be_flushed = "model.dominodatalab.com/prediction" + str(json.dumps(message))
 
         logging_type = utils.get_environment_value('LOG_METHOD')
         if logging_type is None:

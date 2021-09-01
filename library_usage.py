@@ -1,9 +1,9 @@
 import datetime
 import uuid
 
-from Client.prediction_client import PredClient
+from Client.prediction_client import PredictionClient
 
-pred_client = PredClient()
+pred_client = PredictionClient()
 
 feature_names = ['dropperc', 'mins', 'consecmonths', 'income', 'age']
 feature_values = ['dropperc', 'mins', 'consecmonths', 'income', 'age']
