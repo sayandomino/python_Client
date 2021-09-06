@@ -1,6 +1,6 @@
 from setuptools import setup
 
-PACKAGE_NAME = 'Client'
+PACKAGE_NAME = 'prediction-client'
 
 setup(
     name='python_client',
@@ -14,11 +14,7 @@ setup(
     description='Python Client',
     long_description='',
     install_requires=[
-        'requests>=2.4.2',
-        'bs4==0.*,>=0.0.1',
-        'polling2'
     ],
     extras_require={
-        "airflow":  ['apache-airflow==1.*,>=1.10'],
     }
 )
