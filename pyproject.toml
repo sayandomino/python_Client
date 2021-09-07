@@ -9,7 +9,7 @@ version = "0.1.0b1"
 description = "Domino Prediction Client to log prediction data"
 readme = "README.md"
 authors = [
-    "Sayan Nayak<sayan.nayak@dominodatalab.com>",
+    "Sayan Nayak <sayan.nayak@dominodatalab.com>"
 ]
 license = "Apache Software License 2.0"
 repository = "https://github.com/sayandomino/python_Client"
