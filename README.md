@@ -1,2 +1,2 @@
-# dmm-data-ingest-client
+# python_client
 DMM Data Ingestion client repo

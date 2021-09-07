@@ -4,7 +4,7 @@ requires = ["poetry_core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "dmm-data-ingest-client"
+name = "python_Client"
 version = "0.1.0b1"
 description = "Domino Prediction Client to log prediction data"
 readme = "README.md"
@@ -12,12 +12,12 @@ authors = [
     "Sayan Nayak<sayan.nayak@dominodatalab.com>",
 ]
 license = "Apache Software License 2.0"
-repository = "https://github.com/cerebrotech/dmm-data-ingest-client"
-homepage = "https://github.com/cerebrotech/dmm-data-ingest-client"
+repository = "https://github.com/sayandomino/python_Client"
+homepage = "https://github.com/sayandomino/python_Client"
 
 # Generated client need to be bundled
 packages = [
-    { include = "dmm-data-ingest-client" },
+    { include = "python_Client" },
 ]
 
 # Keywords description https://python-poetry.org/docs/pyproject/#keywords
