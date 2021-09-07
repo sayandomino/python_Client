@@ -17,7 +17,7 @@ homepage = "https://github.com/sayandomino/python_Client"
 
 # Generated client need to be bundled
 packages = [
-    { include = "python_Client" },
+    { include = "Client" },
 ]
 
 # Keywords description https://python-poetry.org/docs/pyproject/#keywords
