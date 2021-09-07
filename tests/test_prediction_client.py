@@ -27,7 +27,7 @@ class PredictionClientTest(unittest.TestCase):
 
         # Record eventID and current time
         event_id = uuid.uuid4()
-        event_time = datetime.datetime.now()
+        event_time = datetime.datetime.now().timestamp() * 1000
 
         # Custom metadata I want to track for this event
         metadata = {"cohort": "cohort_id"}
@@ -42,7 +42,7 @@ class PredictionClientTest(unittest.TestCase):
 
         fetched_event_id = message.get("dmo_event_id")
 
-        assert fetched_event_id == event_id
+        assert fetched_event_id == str(event_id)
 
     def testGetModelVersion(self):
         os.environ["HOSTNAME"] = "model-6100391064067162909bf2f2-7d75566cb-49l9j"
