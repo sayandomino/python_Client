@@ -1,9 +1,9 @@
+import datetime
+import os
 import unittest
 import uuid
-import os
-import datetime
 from Client import utils
-from Client.prediction_client import PredClient
+from Client.prediction_client import PredictionClient
 
 
 class PredictionClientTest(unittest.TestCase):
@@ -13,7 +13,7 @@ class PredictionClientTest(unittest.TestCase):
 
     def test_prtediction_client(self):
 
-        pred_client = PredClient()
+        pred_client = PredictionClient()
 
         feature_names = ['dropperc', 'mins', 'consecmonths', 'income', 'age']
         feature_values = ['dropperc', 'mins', 'consecmonths', 'income', 'age']

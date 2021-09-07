@@ -1,7 +1,3 @@
-import sys
-import json
-
-
 class DefaultLogger:
 
     def log_prediction(self, message):
