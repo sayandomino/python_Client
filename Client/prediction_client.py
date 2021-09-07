@@ -3,8 +3,6 @@ import uuid
 from datetime import datetime
 
 from Client import utils
-
-
 from Client.logger import loggerfactory
 
 
